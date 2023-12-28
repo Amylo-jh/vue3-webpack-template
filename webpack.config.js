@@ -40,6 +40,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
+                exclude: /node_modules/,
                 use: [
                     'babel-loader'
                 ]
@@ -65,6 +66,8 @@ module.exports = {
     ], 
 
     devServer: {
-        host: 'localhost'
+        host: 'localhost',
+        port: 8080,
+        hot: true
     }
 }
